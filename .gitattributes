@@ -1,0 +1,3 @@
+*.hs linguist-language=Haskell
+*.ipynb linguist-language=Haskell
+*py.ipynb linguist-language=python
