@@ -21,4 +21,4 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           description: ihaskell-notebook image with tweaks by tyg3rr
-          workdir: .devcontainer
+          workdir: ./.devcontainer
