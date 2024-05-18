@@ -1,0 +1,19 @@
+---
+name: Publish Devcontainer Image Snapshot
+
+on:
+  workflow_dispatch:
+
+jobs:
+  release-image:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build
+        uses: ./.github/actions/docker-image
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          description: ihaskell-notebook image with tweaks by tyg3rr
+          workdir: ./.devcontainer
