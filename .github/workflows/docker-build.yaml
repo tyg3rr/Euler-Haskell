@@ -3,13 +3,6 @@ name: Publish Devcontainer Image Snapshot
 
 on:
   workflow_dispatch:
-  push:
-    branches:
-      - main
-    paths:
-    - .devcontainer/Dockerfile
-    - .github/actions/docker-image/action.yaml
-    - .github/workflows/docker.build.yaml
 
 jobs:
   release-image:
