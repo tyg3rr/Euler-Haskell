@@ -1,7 +1,8 @@
 ---
-name: Publish Snapshot
+name: Publish Devcontainer Image Snapshot
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - main
@@ -19,3 +20,4 @@ jobs:
         uses: ./.github/actions/docker-image
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+          description: ihaskell-notebook image with tweaks by tyg3rr
